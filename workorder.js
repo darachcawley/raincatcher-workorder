@@ -204,21 +204,19 @@ ngModule.factory('workOrderManager', function($q, FHCloud) {
     restrict: 'E'
   , template: $templateCache.get('wfm-template/workorder-list.tpl.html')
   , scope: {
-      workorders : '='
+      list : '=list'
     }
   , controller: function() {
       var self = this;
       self.getStatusIcon = getStatusIcon;
+      self.selectWorkorder = function(event, workorder) {
+        self.selectedWorkorderId = workorder.id;
+        mediator.publish('workorder:selected', workorder);
+        event.preventDefault();
+      }
       self.isWorkorderShown = function(workorder) {
         return self.shownWorkorder === workorder;
       };
-      self.toggleWorkorder = function(event, workorder) {
-        if (self.isWorkorderShown(workorder)) {
-          self.shownWorkorder = '';
-        } else {
-          self.shownWorkorder = workorder;
-        }
-      }
     }
   , controllerAs: 'ctrl'
   };
