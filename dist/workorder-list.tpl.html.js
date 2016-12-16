@@ -37,8 +37,8 @@ ngModule.run(['$templateCache', function ($templateCache) {
     '  <workorder-status class="" status="ctrl.resultMap[workorder.id].status"></workorder-status>\n' +
     '\n' +
     '    <div class="md-list-item-text">\n' +
-    '      <h3>{{workorder.title}}</h3>\n' +
-    '      <p>{{workorder.address}}</p>\n' +
+    '      <h3>{{workorder.caseType}} at {{workorder.breakdownAddress}}</h3>\n' +
+    '      <p>{{workorder.name}} - {{workorder.phoneNumber}}</p>\n' +
     '    </div>\n' +
     '    <md-divider></md-divider>\n' +
     '  </md-list-item>\n' +
