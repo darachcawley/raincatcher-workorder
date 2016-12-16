@@ -10,7 +10,7 @@ ngModule.run(['$templateCache', function ($templateCache) {
     '<md-toolbar>\n' +
     '  <div class="md-toolbar-tools">\n' +
     '    <h3>\n' +
-    '      <span>Workorders</span>\n' +
+    '      <span>Cases</span>\n' +
     '    </h3>\n' +
     '  </div>\n' +
     '</md-toolbar>\n' +
